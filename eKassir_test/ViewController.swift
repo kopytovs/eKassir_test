@@ -62,6 +62,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     var cache = NSCache<NSString, UIImage>()
     
+    var timers = Dictionary<String, Timer>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -164,6 +165,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                     let myData: UIImage = UIImage(data: data)!
                     self.orderPhoto.image = myData
                     self.cache.setObject(myData, forKey: name as NSString)
+                    self.timers[name] = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(self.clearCache(timer:)), userInfo: name, repeats: false)
+                    //let myTimer = Timer(timeInterval: 600, target: self, selector: #selector(self.clearCache(key: )), userInfo: name, repeats: true)
                     break
                 case .failure(let error):
                     print(error)
@@ -193,6 +196,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBAction func closeButton(_ sender: Any) {
         hideInfo()  
+    }
+    
+    func clearCache(timer: Timer){
+        let key = timer.userInfo as! String
+        self.cache.removeObject(forKey: key as NSString)
     }
     
     func hideInfo(){

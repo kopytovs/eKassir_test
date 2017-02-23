@@ -10,27 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eKassir_test/ViewController.swift"
-            timestampString = "509540095.236023"
+            timestampString = "509568271.94305"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "eKassir_test/ViewController.swift"
-            timestampString = "509502089.182546"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eKassir_test/ViewController.swift"
-            timestampString = "509502089.182546"
+            timestampString = "509568271.94305"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "270"
+            endingLineNumber = "270"
+            landmarkName = "findCurrency(cur:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -58,12 +42,204 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eKassir_test/ViewController.swift"
-            timestampString = "509540095.236023"
+            timestampString = "509568271.94305"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "271"
+            endingLineNumber = "271"
+            landmarkName = "findCurrency(cur:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "eKassir_test.ViewController.findCurrency (cur : Swift.String) -&gt; Swift.String"
+                  moduleName = "eKassir_test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Kopytov/Documents/Programming/eKassir_test/eKassir_test/ViewController.swift"
+                  timestampString = "509544467.101773"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "eKassir_test.ViewController.findCurrency (cur : Swift.String) -&gt; Swift.String"
+                  moduleName = "eKassir_test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Kopytov/Documents/Programming/eKassir_test/eKassir_test/ViewController.swift"
+                  timestampString = "509544467.104843"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "288">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "eKassir_test/ViewController.swift"
+            timestampString = "509568271.94305"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "274"
+            endingLineNumber = "274"
+            landmarkName = "findCurrency(cur:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "eKassir_test.ViewController.findCurrency (cur : Swift.String) -&gt; Swift.String"
+                  moduleName = "eKassir_test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Kopytov/Documents/Programming/eKassir_test/eKassir_test/ViewController.swift"
+                  timestampString = "509544467.710618"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "137"
+                  endingLineNumber = "137"
+                  offsetFromSymbolStart = "554">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "eKassir_test.ViewController.findCurrency (cur : Swift.String) -&gt; Swift.String"
+                  moduleName = "eKassir_test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Kopytov/Documents/Programming/eKassir_test/eKassir_test/ViewController.swift"
+                  timestampString = "509544467.712635"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "137"
+                  endingLineNumber = "137"
+                  offsetFromSymbolStart = "786">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "eKassir_test/ViewController.swift"
+            timestampString = "509568271.94305"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "277"
+            endingLineNumber = "277"
+            landmarkName = "findCurrency(cur:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "eKassir_test.ViewController.findCurrency (cur : Swift.String) -&gt; Swift.String"
+                  moduleName = "eKassir_test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Kopytov/Documents/Programming/eKassir_test/eKassir_test/ViewController.swift"
+                  timestampString = "509544471.758766"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "1063">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "eKassir_test.ViewController.findCurrency (cur : Swift.String) -&gt; Swift.String"
+                  moduleName = "eKassir_test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Kopytov/Documents/Programming/eKassir_test/eKassir_test/ViewController.swift"
+                  timestampString = "509544471.762117"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "1304">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "eKassir_test/ViewController.swift"
+            timestampString = "509568271.94305"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "280"
+            endingLineNumber = "280"
+            landmarkName = "findCurrency(cur:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "eKassir_test.ViewController.findCurrency (cur : Swift.String) -&gt; Swift.String"
+                  moduleName = "eKassir_test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Kopytov/Documents/Programming/eKassir_test/eKassir_test/ViewController.swift"
+                  timestampString = "509544472.720774"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "143"
+                  endingLineNumber = "143"
+                  offsetFromSymbolStart = "1579">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "eKassir_test.ViewController.findCurrency (cur : Swift.String) -&gt; Swift.String"
+                  moduleName = "eKassir_test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Kopytov/Documents/Programming/eKassir_test/eKassir_test/ViewController.swift"
+                  timestampString = "509544472.724414"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "143"
+                  endingLineNumber = "143"
+                  offsetFromSymbolStart = "1820">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "eKassir_test/ViewController.swift"
+            timestampString = "509568271.94305"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "283"
+            endingLineNumber = "283"
+            landmarkName = "findCurrency(cur:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -74,12 +250,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eKassir_test/ViewController.swift"
-            timestampString = "509502089.182546"
+            timestampString = "509568271.94305"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "289"
+            endingLineNumber = "289"
+            landmarkName = "findCurrency(cur:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "eKassir_test/ViewController.swift"
+            timestampString = "509568271.94305"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "273"
+            endingLineNumber = "273"
+            landmarkName = "findCurrency(cur:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "eKassir_test/ViewController.swift"
+            timestampString = "509568271.94305"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

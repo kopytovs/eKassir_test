@@ -139,43 +139,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        orderInfo.text = "Заказ №" + String(self.orders.count-indexPath.row)
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "'Дата: 'dd/MM/yy'   Время: 'kk:mm:ss"
-        dataOrder.text = dateFormatter.string(from: orders[indexPath.row].orderTime)
-        fromOrder.text = " От: " + orders[indexPath.row].startAdress.adress
-        toOrder.text = " До: " + orders[indexPath.row].endAdress.adress
-        let currency: String = findCurrency(cur: orders[indexPath.row].price.currency)
-        let price: Double = Double(orders[indexPath.row].price.amount)/100
-        priceOrder.text = " " + ((Int(price*100)%100 == 0) ? String(Int(price)) : String(price)) + currency
-        driverOrder.text = orders[indexPath.row].vehicle.driverName
-        carOrder.text = orders[indexPath.row].vehicle.modelNumber + "  ||  " + orders[indexPath.row].vehicle.regNumber
-        let myPhotoSrc = imgSource + orders[indexPath.row].vehicle.photo
-        
-        let name: String = orders[indexPath.row].vehicle.photo
-        
-        if let cachedImg = cache.object(forKey: name as NSString){
-            
-            orderPhoto.image = cachedImg
-            
-        } else {
-            Alamofire.request(myPhotoSrc).responseData(completionHandler: { response in
-                switch response.result{
-                case .success(let data):
-                    let myData: UIImage = UIImage(data: data)!
-                    self.orderPhoto.image = myData
-                    self.cache.setObject(myData, forKey: name as NSString)
-                    self.timers[name] = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(self.clearCache(timer:)), userInfo: name, repeats: false)
-                    //let myTimer = Timer(timeInterval: 600, target: self, selector: #selector(self.clearCache(key: )), userInfo: name, repeats: true)
-                    break
-                case .failure(let error):
-                    print(error)
-                    break
-                }
-            })
-        }
-        
-        //orderPhoto
+        fillTheFields(row: indexPath.row)
         
         UIView.animate(withDuration: 0.3, animations: {
             self.myCollectionView.cellForItem(at: indexPath)?.backgroundColor = UIColor.clear
@@ -209,36 +173,49 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             self.myBlur.center.y += self.view.bounds.height
         }, completion: nil)
     }
-    // MARK: UICollectionViewDelegate
     
-    /*
-     // Uncomment this method to specify if the specified item should be highlighted during tracking
-     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-     return true
-     }
-     */
+    func fillTheFields(row: Int){
+        orderInfo.text = "Заказ №" + String(self.orders.count - row)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "'Дата: 'dd/MM/yy'   Время: 'kk:mm:ss"
+        dataOrder.text = dateFormatter.string(from: orders[row].orderTime)
+        fromOrder.text = " От: " + orders[row].startAdress.adress
+        toOrder.text = " До: " + orders[row].endAdress.adress
+        let currency: String = findCurrency(cur: orders[row].price.currency)
+        let price: Double = Double(orders[row].price.amount)/100
+        priceOrder.text = " " + ((Int(price*100)%100 == 0) ? String(Int(price)) : String(price)) + currency
+        driverOrder.text = orders[row].vehicle.driverName
+        carOrder.text = orders[row].vehicle.modelNumber + "  ||  " + orders[row].vehicle.regNumber
+        let myPhotoSrc = imgSource + orders[row].vehicle.photo
+        
+        let name: String = orders[row].vehicle.photo
+        
+        cacheOrNotCache(name: name, src: myPhotoSrc)
+    }
     
-    /*
-     // Uncomment this method to specify if the specified item should be selected
-     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-     return true
-     }
-     */
-    
-    /*
-     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-     override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-     return false
-     }
-     
-     override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-     return false
-     }
-     
-     override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-     
-     }
-     */
+    func cacheOrNotCache(name: String, src: String){
+        if let cachedImg = cache.object(forKey: name as NSString){
+            
+            orderPhoto.image = cachedImg
+            
+        } else {
+            Alamofire.request(src).responseData(completionHandler: { response in
+                switch response.result{
+                case .success(let data):
+                    let myData: UIImage = UIImage(data: data)!
+                    self.orderPhoto.image = myData
+                    self.cache.setObject(myData, forKey: name as NSString)
+                    self.timers[name] = Timer.scheduledTimer(timeInterval: 600, target: self, selector: #selector(self.clearCache(timer:)), userInfo: name, repeats: false)
+                    //let myTimer = Timer(timeInterval: 600, target: self, selector: #selector(self.clearCache(key: )), userInfo: name, repeats: true)
+                    break
+                case .failure(let error):
+                    print(error)
+                    break
+                }
+            })
+        }
+    }
+
     
     func refreshOrders(){
         
@@ -247,7 +224,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             case .success(let value):
                 self.myJson = JSON(value)
                 for index in 0...self.myJson.count-1 {
-                    //let newItem = self.myJson[index]
                     let newID = self.myJson[index]["id"].intValue
                     let newStAdr = Adress(city: (self.myJson[index]["startAddress"]["city"]).stringValue, adress: (self.myJson[index]["startAddress"]["address"]).stringValue)
                     let newEndAdr = Adress(city: (self.myJson[index]["endAddress"]["city"]).stringValue, adress: (self.myJson[index]["endAddress"]["address"]).stringValue)
